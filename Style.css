@@ -1,0 +1,520 @@
+/* IMPORT LINES ALWAYS TO BE AT THE TOP AND COPY EVERYTHING EXCEPT THE STYLE  */
+
+/* ALSO THERE WILL BE A FONT-FAMILY ADD THAT TO THE HEADER MAIN FOOTER WHATEVER YOU WANT  */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* below is the example of CSS Variable to set the main bg color  */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* then we put the css var in the place where we want that value to be input. for example below in the header.  */
+
+header{
+    margin: 10px;
+    color: white;
+    position: sticky;
+    top: 0px;
+    border-radius: 30px;
+    background: rgb(45, 45, 45);
+    z-index: 1;
+}
+/* previously the height below in nav ul was abbove in header but we shifted it down because basically header is the ul and then to center vertically we used align items center  */
+
+/* This is the same technique used to make dark mode and white mode using js and css var.  */
+
+
+nav{
+    display: flex;
+}
+
+nav .logo{
+    align-items: center;
+    justify-content: center;
+    margin: auto 0;
+    padding: 0 2vw 0 15vw;
+}
+
+nav ul .dropdown{
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav ul li{
+    list-style: none;
+    padding: 0 23px;
+    font-size: 20px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+#Login{
+    border: 2px solid rgb(255, 255, 255);
+    padding: 15px 35px;
+    border-radius: 30px;
+    background-color: rgb(76, 76, 76);
+}
+
+#Login:hover{
+    border: 2px solid rgb(150, 202, 255);
+    color: rgb(150,202, 255);
+}
+
+nav ul li a:hover{
+    color: rgb(150, 202, 255);
+}
+
+.search-box{
+    display: flex;
+    align-items: center;
+    padding: 12px 12px 0px 12px;
+    margin: 10px 50px 10px 10px;
+    width: 37vw;  
+    border-radius: 30px;  
+    /* background: rgb(18, 108, 160); */
+    background: rgb(74, 74, 74);
+}
+
+.gg-search{
+    position: absolute;
+    top: -22px;
+    left: 35vw;
+    color: rgb(241, 241, 241);
+}
+
+.gg-search:hover{
+    color: rgb(150, 202, 255);
+}
+
+/* the below is what we used to make the search bar the way we did */
+
+.search-box input{
+    width: 40vw;
+    height:30px;
+    padding: 0 0 0 15px;
+    border: none;
+    background: none;
+    outline: none;
+    color: rgb(241, 241, 241);
+}
+
+.mini-header{
+        background-color: rgb(0, 66, 219);
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        padding: 10px 20px 0px 20px;
+        border-radius: 20px;
+        margin: 0 50px 0px 50px;
+        z-index: -1;
+        transform: translateY(-80px);
+}
+
+.mini-card{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    width: 100vw;
+    padding: 0vw 1.8vw;
+    align-items: center;
+}
+
+.mini-card:hover{
+    transform: translateY(5px);
+}
+
+@keyframes mini-card-bounce-text {
+    0%{
+        transform: translateY(0px)
+    }
+
+    50%{
+        transform: translateY(3px)
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.mini-card-bounce-text{
+        animation: mini-card-bounce-text 1s infinite ease-in-out;
+}
+
+
+@keyframes mini-header {
+    0% {
+        transform: translateY(-80px);
+    }
+    
+    0%{
+        transform: translateY(-10px);
+    }
+}
+
+.mini-header:hover{
+    animation: 0.5s ease-in-out 1 reverse both mini-header;
+}
+
+.main-con{
+    height:460px;
+}
+
+.main-slider{
+    background-color: rgb(45, 45, 45);
+    height: 450px;
+    margin: 0 auto;
+    width: 95vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; 
+    border-radius: 20px;
+}
+
+.main-slider img{ 
+    display: block;
+    margin: auto;
+}
+
+@keyframes slide1 {
+    0%{
+        transform: translate(-46vw);
+    }
+
+    25%{
+        transform: translate(65vw); 
+    }
+
+    50%{
+        transform: translate(65vw); 
+    }
+
+    75%{
+        transform: translate(180vw);
+    }
+
+    100%{
+        transform: translate(180vw);
+    }
+}
+
+@keyframes slide2 {
+    0%{
+        transform: translate(-62vw); 
+    }
+
+    25%{
+        transform: translate(50vw); 
+    }
+
+    25.01%{
+        transform: translate(-180vw); 
+    }
+
+    50%{
+        transform: translate(-180vw); 
+    }
+
+    75%{
+        transform: translate(-62vw); 
+    }
+    
+    100%{
+        transform: translate(-62vw); 
+    }
+}
+
+#msi-1{
+    transform: translate(-46vw);
+    animation: slide1 8s 1s forwards infinite;
+    border-radius: 20px;
+}
+
+#msi-2{
+    transform: translate(-62vw);
+    animation: slide2 8s 1s forwards infinite;
+    border-radius: 20px;
+}
+
+.main-card-box{
+    width: 95vw;
+    height: 400px;
+    margin: auto auto 10px auto;
+    border-radius: 20px;
+    background-color:rgb(45, 45, 45);
+}
+
+.card-box-head{
+    height: 80px;
+    width: 74vw;
+    position: relative;
+    left: 0.75vw;
+    top: 12px;
+    border-radius: 20px;
+    background-color: rgb(45, 45, 45);
+}
+
+.card-box-head h1{
+    position: relative;
+    left: 2vw;
+    top: 20px;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card-box-head h2 a{
+    position: relative;
+    left: 63vw;
+    top: -12px;
+    padding: 10px 30px;
+    background-color:rgb(76, 76, 76);
+    border-radius: 30px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+.card-box-head h2 a:hover{
+    color: rgb(150, 202, 255);
+}
+
+.card-box-body{
+    height: 280px;
+    width: 74vw;
+    position: relative;
+    left: 0.75vw;
+    top: 25px;
+    padding: -20px;
+    border-radius: 20px;
+    background-color: #121212;
+}
+
+.card-items{
+    /* border: 2px solid red; */
+    display: flex;
+    width: 73vw;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    row-gap: 5px;
+}
+
+.card-items .card{
+    /* border: 2px solid red; */
+    display: flex;
+    width: 15vw;
+    position: relative;
+    top: 20px;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.card-box-img{
+    height: 375px;
+    width: 18vw;
+    position: relative;
+    left: 76vw;
+    bottom: 349px;
+    border-radius: 20px;
+}
+
+.card-box-img img{
+    width: 272px;
+    height: 375px;
+    border-radius: 20px;
+}
+
+.main-card-box-alt{
+    width: 95vw;
+    height: 400px;
+    margin: auto auto 10px auto;
+    border-radius: 20px;
+    background-color:rgb(45, 45, 45);
+}
+
+.card-box-head-alt{
+    height: 80px;
+    width: 74vw;
+    position: relative;
+    left: 20vw;
+    top: 12px;
+    border-radius: 20px;
+    background-color: rgb(45, 45, 45);
+}
+
+.card-box-head-alt h1{
+    position: relative;
+    left: 2vw;
+    top: 20px;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card-box-head-alt h2 a{
+    position: relative;
+    left: 63vw;
+    top: -12px;
+    padding: 10px 30px;
+    background-color:rgb(76, 76, 76);
+    border-radius: 30px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+.card-box-head-alt h2 a:hover{
+    color: rgb(150, 202, 255);
+}
+
+.card-box-body-alt{
+    height: 280px;
+    width: 74vw;
+    position: relative;
+    left: 20vw;
+    top: 25px;
+    padding: -20px;
+    border-radius: 20px;
+    background-color: #121212;
+}
+
+.card-items-alt{
+    /* border: 2px solid red; */
+    display: flex;
+    width: 73vw;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    row-gap: 5px;
+}
+
+.card-items-alt .card{
+    /* border: 2px solid red; */
+    display: flex;
+    width: 15vw;
+    position: relative;
+    top: 20px;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+}
+
+.card-box-img-alt{
+    height: 375px;
+    width: 18vw;
+    position: relative;
+    left: 0.75vw;
+    bottom: 349px;
+    border-radius: 20px;
+}
+
+.card-box-img-alt img{
+    width: 272px;
+    height: 375px;
+    border-radius: 20px;
+}
+
+.main-card-box-full{
+    width: 95vw;
+    height: 400px;
+    margin: auto auto 10px auto;
+    border-radius: 20px;
+    background-color:rgb(45, 45, 45);
+}
+
+.card-box-head-full{
+    height: 80px;
+    width: 74vw;
+    position: relative;
+    top: 12px;
+    border-radius: 20px;
+    background-color: rgb(45, 45, 45);
+}
+
+.card-box-head-full h1{
+    position: relative;
+    left: 2vw;
+    top: 20px;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card-box-head-full h2 a{
+    position: relative;
+    left: 83vw;
+    top: -12px;
+    padding: 10px 30px;
+    background-color:rgb(76, 76, 76);
+    border-radius: 30px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+.card-box-head-full h2 a:hover{
+    color: rgb(150, 202, 255);
+}
+
+.card-box-body-full{
+    height: 280px;
+    width: 93vw;
+    position: relative;
+    left: 1vw;
+    top: 25px;
+    padding: -20px;
+    border-radius: 20px;
+    background-color: #121212;
+}
+
+.card-items-full{
+    display: flex;
+}
+
+.card-items-full .card{
+    /* border: 2px solid red; */
+    display: flex;
+    width: 15.5vw;
+    position: relative;
+    top: 20px;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+}
+
+.blue{
+    color: rgb(0, 191, 255);
+}
+
+.green{
+    color: rgb(0, 207, 0);
+}
+
+.grey{
+    color: rgb(161, 161, 161);
+}
+
+body{
+    background: #121212;
+    color: white;
+}
+
+footer{
+    height: 100px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    background: rgb(45, 45, 45);
+}

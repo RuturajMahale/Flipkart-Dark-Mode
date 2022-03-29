@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    margin: 10px;
+    padding: 10px;
+    position: sticky;
+    top: 0px;
+    border-radius: 30px;
+    background: rgb(45, 45, 45);
+    z-index: 1;
+}
+/* previously the height below in nav ul was abbove in header but we shifted it down because basically header is the ul and then to center vertically we used align items center  */
+
+/* This is the same technique used to make dark mode and white mode using js and css var.  */
+.logo{
+    align-items: center;
+    justify-content: center;
+    margin: auto 0;
+    padding: 0 0 0 2vw;
+}
+
+.background-img{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 50%;
+    /* transform: translateX(1200px); */
+    
+}
+
+.background-txt{
+    font-size: 300%;
+    color: white;
+    opacity: 80%;
+}
+
+footer{
+    height: 100px;
+    width: 100vw;
+    position: absolute;
+    bottom: -155px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    background: rgb(45, 45, 45);
+}
+
+body{
+    background: black;
+}
